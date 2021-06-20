@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>Kanbersky.HealthChecks</id>
+    <version>1.0.0.0</version>
+    <title>Kanbersky HealthCheck Helper</title>
+    <authors>Sefik Can Kanber</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/Sefikcan/Kanbersky.HealthChecks</projectUrl>
+    <description>This package is used in healthchecks operations.</description>
+    <releaseNotes>Add redis, mssql, mysql, postgresql, elasticsearch, entityframework helper methods</releaseNotes>
+    <copyright>Copyright 2021</copyright>
+    <tags>HealthChecks MongoDB Redis Elasticsearch EntityFrameworkCore PostgreSQL MsSQL MySQL</tags>
+    <dependencies>
+      <dependency id="AspNetCore.HealthChecks.Elasticsearch" version="5.0.1"></dependency>
+      <dependency id="AspNetCore.HealthChecks.MongoDb" version="5.0.1"></dependency>
+      <dependency id="AspNetCore.HealthChecks.MySql" version="5.0.1"></dependency>
+      <dependency id="AspNetCore.HealthChecks.NpgSql" version="5.0.2"></dependency>
+      <dependency id="AspNetCore.HealthChecks.Redis" version="5.0.2"></dependency>
+      <dependency id="AspNetCore.HealthChecks.SqlServer" version="5.0.3"></dependency>
+      <dependency id="AspNetCore.HealthChecks.UI.Client" version="5.0.1"></dependency>
+      <dependency id="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" version="5.0.7"></dependency>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin\Debug\net5.0\Kanbersky.HealthChecks.dll" target="bin\Debug\net5.0\Kanbersky.HealthChecks.dll"></file>
+    <file src="bin\Release\net5.0\Kanbersky.HealthChecks.dll" target="bin\Release\net5.0\Kanbersky.HealthChecks.dll"></file>
+  </files>
+</package>

@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D210A290-43CB-4384-93E4-078AA3F5F23E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kanbersky.HealthChecks", "src\Kanbersky.HealthChecks\Kanbersky.HealthChecks.csproj", "{837910E5-B75F-4248-A6AA-43EACC0B72AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{837910E5-B75F-4248-A6AA-43EACC0B72AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837910E5-B75F-4248-A6AA-43EACC0B72AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837910E5-B75F-4248-A6AA-43EACC0B72AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837910E5-B75F-4248-A6AA-43EACC0B72AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{837910E5-B75F-4248-A6AA-43EACC0B72AB} = {D210A290-43CB-4384-93E4-078AA3F5F23E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB58696F-2E42-4ED5-B730-14F186DA809E}
+	EndGlobalSection
+EndGlobal
