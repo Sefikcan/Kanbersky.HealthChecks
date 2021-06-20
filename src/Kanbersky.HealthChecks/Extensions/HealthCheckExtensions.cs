@@ -1,11 +1,19 @@
 ﻿using Kanbersky.HealthChecks.Models.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
+using System.Collections.Generic;
 
 namespace Kanbersky.HealthChecks.Extensions
 {
     public static class HealthCheckExtensions
     {
+        /// <summary>
+        /// This method performs redis healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddRedisHealthCheck(this IServiceCollection services, RedisHealthChecksModel model)
         {
             services.AddHealthChecks()
@@ -16,6 +24,12 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs mongo healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddMongoHealthCheck(this IServiceCollection services, MongoDBHealthChecksModel model)
         {
             services.AddHealthChecks()
@@ -26,6 +40,13 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs entity framework healthcheck operations.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddEntityFrameworkHealthCheck<T>(this IServiceCollection services, EntityFrameworkHealthChecksModel model) where T : DbContext
         {
             services.AddHealthChecks()
@@ -35,6 +56,12 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs postgresql healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddPostgreSQLHealthCheck(this IServiceCollection services, PostgreSQLHealthChecksModel model)
         {
             services.AddHealthChecks()
@@ -46,6 +73,12 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs mysql healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddMySQLHealthCheck(this IServiceCollection services, MySQLHealthChecksModel model)
         {
             services.AddHealthChecks()
@@ -56,6 +89,12 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs mssql healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddMsSQLHealthCheck(this IServiceCollection services, MsSQLHealthChecksModel model)
         {
             services.AddHealthChecks()
@@ -67,12 +106,37 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs elasticsearch healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static IServiceCollection AddElasticsearchHealthCheck(this IServiceCollection services, ElasticsearchHealthChecksModel model)
         {
             services.AddHealthChecks()
                     .AddElasticsearch(elasticsearchUri: model.ElasticsearchUrl,
                                       name: model.Name,
                                       failureStatus: model.FailureStatus);
+
+            return services;
+        }
+
+        /// <summary>
+        /// This method performs uri group healthcheck operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="urlGroups"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddUrlGroupsHealthCheck(this IServiceCollection services, List<UrlGroupHealthChecksModel> urlGroups)
+        {
+            var healthchecks = services.AddHealthChecks();
+            foreach (var urlGroup in urlGroups)
+            {
+                healthchecks.AddUrlGroup(uri: new Uri(urlGroup.ApiUrl), 
+                                         name: urlGroup.Name, 
+                                         failureStatus: urlGroup.FailureStatus);
+            }
 
             return services;
         }

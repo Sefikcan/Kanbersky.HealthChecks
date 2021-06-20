@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Kanbersky.HealthChecks</id>
-    <version>1.0.0.0</version>
+    <version>1.1.0.0</version>
     <title>Kanbersky HealthCheck Helper</title>
     <authors>Sefik Can Kanber</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Sefikcan/Kanbersky.HealthChecks</projectUrl>
     <description>This package is used in healthchecks operations.</description>
-    <releaseNotes>Add redis, mssql, mysql, postgresql, elasticsearch, entityframework helper methods</releaseNotes>
+    <releaseNotes>Add uri group helper methods and comment line has been added to each method.</releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>HealthChecks MongoDB Redis Elasticsearch EntityFrameworkCore PostgreSQL MsSQL MySQL</tags>
     <dependencies>
@@ -21,6 +21,7 @@
       <dependency id="AspNetCore.HealthChecks.SqlServer" version="5.0.3"></dependency>
       <dependency id="AspNetCore.HealthChecks.UI.Client" version="5.0.1"></dependency>
       <dependency id="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" version="5.0.7"></dependency>
+      <dependency id="AspNetCore.HealthChecks.Uris" version="5.0.1"></dependency>
     </dependencies>
   </metadata>
   <files>

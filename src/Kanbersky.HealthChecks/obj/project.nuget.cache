@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4tN/FTiHz3+PGxODfkJU6eNULL8THFOFqFUEdi4XqTQ4kNAc9wO2LhV/XPu6uXER/yuM7KSHvriidvRC5ajyNw==",
+  "dgSpecHash": "1SwduESJaaLgsVPCcXTH1VFjwr8NRgGKwEzNdJy0A63vl4TwJ8LgpPN5a0DsV4bpuv8o9TllboSMu0TnQgx7TQ==",
   "success": true,
   "projectFilePath": "D:\\WorkSpaces\\Back-end\\MyNuget\\Kanbersky.HealthChecks\\src\\Kanbersky.HealthChecks\\Kanbersky.HealthChecks.csproj",
   "expectedPackageFiles": [
@@ -12,6 +12,7 @@
     "C:\\Users\\User\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\5.0.3\\aspnetcore.healthchecks.sqlserver.5.0.3.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\aspnetcore.healthchecks.ui.client\\5.0.1\\aspnetcore.healthchecks.ui.client.5.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\aspnetcore.healthchecks.ui.core\\5.0.1\\aspnetcore.healthchecks.ui.core.5.0.1.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\aspnetcore.healthchecks.uris\\5.0.1\\aspnetcore.healthchecks.uris.5.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\dnsclient\\1.3.1\\dnsclient.1.3.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\elasticsearch.net\\7.9.0\\elasticsearch.net.7.9.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -32,6 +33,7 @@
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.entityframeworkcore\\5.0.7\\microsoft.extensions.diagnostics.healthchecks.entityframeworkcore.5.0.7.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\5.0.0\\microsoft.extensions.hosting.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
