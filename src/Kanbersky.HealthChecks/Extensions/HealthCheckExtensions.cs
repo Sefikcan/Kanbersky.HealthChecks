@@ -1,4 +1,7 @@
-﻿using Kanbersky.HealthChecks.Models.Concrete;
+﻿using HealthChecks.UI.Client;
+using Kanbersky.HealthChecks.Models.Concrete;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -139,6 +142,20 @@ namespace Kanbersky.HealthChecks.Extensions
             }
 
             return services;
+        }
+
+        public static IApplicationBuilder UseKanberskyHealthChecks(this IApplicationBuilder app, string healthUrl = "/healthy")
+        {
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHealthChecks(healthUrl, new HealthCheckOptions
+                {
+                    Predicate = _ => true,
+                    ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
+                });
+            });
+
+            return app;
         }
     }
 }

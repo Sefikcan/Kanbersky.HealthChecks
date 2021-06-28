@@ -2,14 +2,14 @@
 <package >
   <metadata>
     <id>Kanbersky.HealthChecks</id>
-    <version>1.1.0.0</version>
+    <version>1.2.0.0</version>
     <title>Kanbersky HealthCheck Helper</title>
     <authors>Sefik Can Kanber</authors>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
     <projectUrl>https://github.com/Sefikcan/Kanbersky.HealthChecks</projectUrl>
     <description>This package is used in healthchecks operations.</description>
-    <releaseNotes>Add uri group helper methods and comment line has been added to each method.</releaseNotes>
+    <releaseNotes>Update registration code block</releaseNotes>
     <copyright>Copyright 2021</copyright>
     <tags>HealthChecks MongoDB Redis Elasticsearch EntityFrameworkCore PostgreSQL MsSQL MySQL</tags>
     <dependencies>
