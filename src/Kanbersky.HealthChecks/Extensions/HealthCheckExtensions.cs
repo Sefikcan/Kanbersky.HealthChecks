@@ -1,8 +1,10 @@
 ﻿using HealthChecks.UI.Client;
 using Kanbersky.HealthChecks.Models.Concrete;
+using Kanbersky.HealthChecks.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -144,10 +146,41 @@ namespace Kanbersky.HealthChecks.Extensions
             return services;
         }
 
+        /// <summary>
+        /// This method performs healthcheckui and Webhook notification operations.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <param name="configuration"></param>
+        /// <returns></returns>
+        public static IServiceCollection AddHealthChecksUI(this IServiceCollection services, IConfiguration configuration)
+        {
+            //TODO: This method only work in slack webhook, change and refactor this method when implement another webhook notification integration
+
+            HealthChecksSettings healthChecksSettings = new HealthChecksSettings();
+            configuration.GetSection(nameof(HealthChecksSettings)).Bind(healthChecksSettings);
+            services.AddSingleton(healthChecksSettings);
+
+            services.AddHealthChecksUI(settings =>
+            {
+                if (healthChecksSettings.EnableWebHook)
+                {
+                    settings.AddWebhookNotification(
+                    name: healthChecksSettings.Name,
+                    uri: healthChecksSettings.Url,
+                    payload: healthChecksSettings.Payload,
+                    restorePayload: healthChecksSettings.RestorePayload);
+                }
+            }).AddInMemoryStorage();
+
+            return services;
+        }
+
         public static IApplicationBuilder UseKanberskyHealthChecks(this IApplicationBuilder app, string healthUrl = "/healthy")
         {
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapHealthChecksUI();
+
                 endpoints.MapHealthChecks(healthUrl, new HealthCheckOptions
                 {
                     Predicate = _ => true,

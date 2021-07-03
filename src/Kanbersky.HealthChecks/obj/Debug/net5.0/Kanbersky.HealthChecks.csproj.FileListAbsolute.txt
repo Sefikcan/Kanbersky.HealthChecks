@@ -9,4 +9,3 @@ D:\WorkSpaces\Back-end\MyNuget\Kanbersky.HealthChecks\src\Kanbersky.HealthChecks
 D:\WorkSpaces\Back-end\MyNuget\Kanbersky.HealthChecks\src\Kanbersky.HealthChecks\obj\Debug\net5.0\Kanbersky.HealthChecks.dll
 D:\WorkSpaces\Back-end\MyNuget\Kanbersky.HealthChecks\src\Kanbersky.HealthChecks\obj\Debug\net5.0\ref\Kanbersky.HealthChecks.dll
 D:\WorkSpaces\Back-end\MyNuget\Kanbersky.HealthChecks\src\Kanbersky.HealthChecks\obj\Debug\net5.0\Kanbersky.HealthChecks.pdb
-D:\WorkSpaces\Back-end\MyNuget\Kanbersky.HealthChecks\src\Kanbersky.HealthChecks\obj\Debug\net5.0\Kanbersky.HealthChecks.csprojAssemblyReference.cache
