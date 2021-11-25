@@ -11,6 +11,9 @@ using System.Collections.Generic;
 
 namespace Kanbersky.HealthChecks.Extensions
 {
+    /// <summary>
+    /// Health Check Extensions
+    /// </summary>
     public static class HealthCheckExtensions
     {
         /// <summary>
